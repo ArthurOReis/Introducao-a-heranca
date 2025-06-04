@@ -3,12 +3,23 @@
  */
 package org.example;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import java.util.Scanner;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.println("Escolha qual exercício executar: \n1- Java of Empires \n2 - Desenho vetorial 2D \n> ");
+            int escolha = input.nextInt();
+            switch (escolha) {
+                case 1:
+                    System.out.println("Java of Empires");
+                    break;
+                case 2:
+                    System.out.println("Desenho vetorial 2D");
+                default:
+                    System.out.println("Opção inválida");
+                    throw new AssertionError();
+            }
+        }
     }
 }
