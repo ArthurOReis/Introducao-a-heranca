@@ -1,18 +1,25 @@
 package org.example.Exercicios.ExercicioUm;
 
 public class Jogador {
-    private String nome;
-    private int vida;
-    private int ataque;
-    private int velocidade;
+    protected String nome;
+    protected int vida;
+    protected int ataque;
+    protected double velocidade;
 
-    public Jogador(String nome, int vida, int ataque, int velocidade){
+    public Jogador(String nome, int vida, int ataque, double velocidade){
         this.nome = nome;
         this.vida = vida;
         this.ataque = ataque;
         this.velocidade = velocidade;
     }
 
+    public String mover(){
+        return "O " + this.nome + " moveu na velocidade " + this.velocidade;
+    }
+    
+    public String atacar(){
+        return "O " + this.nome + " atacou com força " + this.ataque;
+    }
         public String getNome() {
         return nome;
     }
@@ -37,11 +44,11 @@ public class Jogador {
         this.ataque = ataque;
     }
 
-    public int getVelocidade() {
+    public double getVelocidade() {
         return velocidade;
     }
 
-    public void setVelocidade(int velocidade) {
+    public void setVelocidade(double velocidade) {
         this.velocidade = velocidade;
     }
 }
