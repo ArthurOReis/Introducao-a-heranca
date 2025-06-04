@@ -1,10 +1,10 @@
 package org.example.Exercicios.ExercicioUm;
 
 public class Jogador {
-    protected String nome;
-    protected int vida;
-    protected int ataque;
-    protected double velocidade;
+    private String nome;
+    private int vida;
+    private int ataque;
+    private double velocidade;
 
     public Jogador(String nome, int vida, int ataque, double velocidade){
         this.nome = nome;

@@ -5,14 +5,16 @@ package org.example;
 
 import java.util.Scanner;
 
+import org.example.Exercicios.ExercicioUm.Jogo;
+
 public class App {
     public static void main(String[] args) {
         try (Scanner input = new Scanner(System.in)) {
-            System.out.println("Escolha qual exercício executar: \n1- Java of Empires \n2 - Desenho vetorial 2D \n> ");
+            System.out.print("Escolha qual exercício executar: \n1- Java of Empires \n2 - Desenho vetorial 2D \n> ");
             int escolha = input.nextInt();
             switch (escolha) {
                 case 1:
-                    System.out.println("Java of Empires");
+                    Jogo.main(args);
                     break;
                 case 2:
                     System.out.println("Desenho vetorial 2D");
