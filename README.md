@@ -30,3 +30,53 @@ indicando o tipo do objeto
 calcularArea e calcularPerimetro
 - Crie um aplicativo Java (classe com método main) e instancie objetos de
 cada classe
+---
+
+### Diagramas UML
+---
+Exercício um:
+```mermaid
+classDiagram
+    class Jogador {
+        -nome: String
+        -vida: int
+        -ataque: int
+        -velocidade: double
+        +mover() String
+        +atacar() String
+    }
+    class Aldeao
+    class Arqueiro
+    class Cavaleiro
+
+    Aldeao --|> Jogador
+    Arqueiro --|> Jogador
+    Cavaleiro --|> Jogador
+```
+---
+
+Exercício dois:
+```mermaid
+classDiagram
+    class Forma {
+        -corDeLinha: String
+        -corDePreenchimento: String
+        -coordenadas: List~Coordenada~
+        +desenhar() String
+        +calcularArea() double
+        +calcularPerimetro() double
+    }
+    class Linha
+    class Retangulo{
+      -altura: double
+      -largura: double
+    }
+    class Circulo{
+      -raio: double
+    }
+
+    Linha --|> Forma
+    Retangulo --|> Forma
+    Circulo --|> Forma
+```
+---
