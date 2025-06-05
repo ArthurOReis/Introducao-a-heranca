@@ -5,6 +5,7 @@ package org.example;
 
 import java.util.Scanner;
 
+import org.example.Exercicios.ExercicioDois.AppDesenho2D;
 import org.example.Exercicios.ExercicioUm.Jogo;
 
 public class App {
@@ -13,14 +14,12 @@ public class App {
             System.out.print("Escolha qual exercício executar: \n1- Java of Empires \n2 - Desenho vetorial 2D \n> ");
             int escolha = input.nextInt();
             switch (escolha) {
-                case 1:
-                    Jogo.main(args);
-                    break;
-                case 2:
-                    System.out.println("Desenho vetorial 2D");
-                default:
+                case 1 -> Jogo.main(args);
+                case 2 -> AppDesenho2D.main(args);
+                default -> {
                     System.out.println("Opção inválida");
                     throw new AssertionError();
+                }
             }
         }
     }

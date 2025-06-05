@@ -14,7 +14,7 @@ public abstract class Forma {
     }
 
     public String desenhar(){
-        return "Linha: cor de linha = " + getCorDeLinha() + ", cor de preenchimento = " + getCorDePreenchimento() + ", Área: " + calcularArea();
+        return "Linha: cor de linha = " + getCorDeLinha() + ", cor de preenchimento = " + getCorDePreenchimento();
     }
     public abstract double calcularArea();
     public abstract double calcularPerimetro();
