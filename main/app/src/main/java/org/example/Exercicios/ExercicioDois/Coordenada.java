@@ -9,8 +9,18 @@ public class Coordenada {
     }
 
     public double[] getCoordenada() {
-        return new double[]{x, y};
+        return new double[]{this.x, this.y};
     }
+
+
+    public double getX() {
+        return this.x;
+    }
+
+    public double getY() {
+        return this.x;
+    }
+
 
     public void setCoordenada(double x, double y){
         this.x = x;
