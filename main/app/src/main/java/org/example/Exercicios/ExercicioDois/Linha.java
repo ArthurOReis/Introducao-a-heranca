@@ -7,24 +7,13 @@ public class Linha extends Forma {
     }
 
     @Override
-    public String desenhar() {
-        return "Linha: cor de linha = " + getCorDeLinha() + ", cor de preenchimento = " + getCorDePreenchimento();
-    }
-
-    @Override
     public double calcularArea() {
-        return 0;
+        return 0; // Linha não tem área
     }
 
     @Override
     public double calcularPerimetro() {
-        if (getCoordenadas().size() >= 2) {
-            Coordenada p1 = getCoordenadas().get(0);
-            Coordenada p2 = getCoordenadas().get(1);
-            double dx = p2.getX() - p1.getX();
-            double dy = p2.getY() - p1.getY();
-            return Math.sqrt(dx * dx + dy * dy);
-        }
         return 0;
     }
+
 }

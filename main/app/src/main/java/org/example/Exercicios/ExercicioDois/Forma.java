@@ -13,11 +13,13 @@ public abstract class Forma {
         this.corDePreenchimento = corDePreenchimento;
     }
 
-    public abstract String desenhar();
+    public String desenhar(){
+        return "Linha: cor de linha = " + getCorDeLinha() + ", cor de preenchimento = " + getCorDePreenchimento() + ", Área: " + calcularArea();
+    }
     public abstract double calcularArea();
     public abstract double calcularPerimetro();
 
-        public String getCorDeLinha() {
+    public String getCorDeLinha() {
         return corDeLinha;
     }
 
